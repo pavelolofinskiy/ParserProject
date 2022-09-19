@@ -36,11 +36,11 @@ get_price = driver.find_elements(By.XPATH, "//div[contains(@class,'price')]")
 for prices in get_price:
     price_list.append(prices.text)
 
-src_list = []
+source_list = []
 get_image_src = driver.find_elements(By.XPATH, '//img')
 for img in get_image_src:
     if "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/" in img.get_attribute('src'):
-           src_list.append(img.get_attribute('src'))
+           source_list.append(img.get_attribute('src'))
 
 
 
